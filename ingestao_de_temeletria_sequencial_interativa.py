@@ -12,16 +12,31 @@
 id_dispositivo = str(input("ID: "))  # 1
 temperatura_lida = float(input("Temperatura: ").strip())  # 4
 ciclos_executados = int(input("Ciclos: ").strip())  # 3
-sensor_ativo = bool(
-    input("Ativo? (responda com 's' ou deixe em branco): ").strip().lower()
-)  # 2
+sensor_ativo = str(input("Ativo? (Responda com 1 ou True): ").strip().lower())  # 2
 
 if sensor_ativo in ["1", "true"]:
     sensor_ativo = True
 else:
     sensor_ativo = False
 
-print("Tipo 'id_dispositivo': ", id_dispositivo.__class__)
-print("Tipo 'temperatura_lida': ", temperatura_lida.__class__)
-print("Tipo 'ciclos_executados': ", ciclos_executados.__class__)
-print("Tipo 'sensor_ativo: ", sensor_ativo.__class__)
+print(
+    "id_dispositivo: ",
+    id_dispositivo,
+    " ",
+    type(id_dispositivo).__name__,
+    " | ",
+    "temperatura_lida: ",
+    temperatura_lida,
+    " ",
+    type(temperatura_lida).__name__,
+    " | ",
+    "ciclos_executados: ",
+    ciclos_executados,
+    " ",
+    type(ciclos_executados).__name__,
+    " | ",
+    "sensor_ativo: ",
+    sensor_ativo,
+    " ",
+    type(sensor_ativo).__name__,
+)
